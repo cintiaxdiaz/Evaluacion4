@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyRestMatrizArray", "ProyRestMatrizArray\ProyRestMatrizArray.csproj", "{6074A15F-A96D-4BD0-BA44-9B28554277AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6074A15F-A96D-4BD0-BA44-9B28554277AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6074A15F-A96D-4BD0-BA44-9B28554277AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6074A15F-A96D-4BD0-BA44-9B28554277AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6074A15F-A96D-4BD0-BA44-9B28554277AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D99BBFD-D54C-4570-91CC-0E92F8BD86D0}
+	EndGlobalSection
+EndGlobal
