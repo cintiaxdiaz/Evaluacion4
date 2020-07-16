@@ -180,7 +180,22 @@ namespace ProyRestMatrizArray
         private void TextBox1_TextChanged(object sender, EventArgs e) {
         }
         private void Button4_Click(object sender, EventArgs e) {
+           // Form formulario = new Form4();
+            //formulario.Show();
+        }
+
+        private void PERFILESToolStripMenuItem_Click(object sender, EventArgs e) {
             Form formulario = new Form4();
+            formulario.Show();
+        }
+
+        private void ACCIONESToolStripMenuItem_Click(object sender, EventArgs e) {
+            Form formulario = new Form6();
+            formulario.Show();
+        }
+
+        private void CERRARToolStripMenuItem_Click(object sender, EventArgs e) {
+            Form formulario = new Form5();
             formulario.Show();
         }
     }

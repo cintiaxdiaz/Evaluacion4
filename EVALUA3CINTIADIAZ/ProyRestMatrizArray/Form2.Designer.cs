@@ -65,8 +65,13 @@
             this.hora = new System.Windows.Forms.Label();
             this.horayfecha = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mENÚToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pERFILESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aCCIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cERRARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMesa1
@@ -463,7 +468,7 @@
             this.fecha.BackColor = System.Drawing.Color.Transparent;
             this.fecha.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.ForeColor = System.Drawing.Color.White;
-            this.fecha.Location = new System.Drawing.Point(41, 9);
+            this.fecha.Location = new System.Drawing.Point(437, 24);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(69, 29);
             this.fecha.TabIndex = 16;
@@ -475,7 +480,7 @@
             this.hora.BackColor = System.Drawing.Color.Transparent;
             this.hora.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hora.ForeColor = System.Drawing.Color.White;
-            this.hora.Location = new System.Drawing.Point(551, 9);
+            this.hora.Location = new System.Drawing.Point(771, 24);
             this.hora.Name = "hora";
             this.hora.Size = new System.Drawing.Size(60, 29);
             this.hora.TabIndex = 17;
@@ -490,7 +495,7 @@
             // 
             this.button1.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(781, 12);
+            this.button1.Location = new System.Drawing.Point(921, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 39);
             this.button1.TabIndex = 18;
@@ -498,17 +503,46 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button4
+            // menuStrip1
             // 
-            this.button4.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(889, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 39);
-            this.button4.TabIndex = 23;
-            this.button4.Text = "Historico";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mENÚToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1045, 24);
+            this.menuStrip1.TabIndex = 24;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mENÚToolStripMenuItem
+            // 
+            this.mENÚToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pERFILESToolStripMenuItem,
+            this.aCCIONESToolStripMenuItem,
+            this.cERRARToolStripMenuItem});
+            this.mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
+            this.mENÚToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.mENÚToolStripMenuItem.Text = "MENÚ";
+            // 
+            // pERFILESToolStripMenuItem
+            // 
+            this.pERFILESToolStripMenuItem.Name = "pERFILESToolStripMenuItem";
+            this.pERFILESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pERFILESToolStripMenuItem.Text = "PERFILES";
+            this.pERFILESToolStripMenuItem.Click += new System.EventHandler(this.PERFILESToolStripMenuItem_Click);
+            // 
+            // aCCIONESToolStripMenuItem
+            // 
+            this.aCCIONESToolStripMenuItem.Name = "aCCIONESToolStripMenuItem";
+            this.aCCIONESToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aCCIONESToolStripMenuItem.Text = "ACCIONES";
+            this.aCCIONESToolStripMenuItem.Click += new System.EventHandler(this.ACCIONESToolStripMenuItem_Click);
+            // 
+            // cERRARToolStripMenuItem
+            // 
+            this.cERRARToolStripMenuItem.Name = "cERRARToolStripMenuItem";
+            this.cERRARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cERRARToolStripMenuItem.Text = "ARCHIVO VIGÍA";
+            this.cERRARToolStripMenuItem.Click += new System.EventHandler(this.CERRARToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -517,17 +551,20 @@
             this.BackColor = System.Drawing.Color.Tan;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1045, 655);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.hora);
             this.Controls.Add(this.fecha);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mesas";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,6 +607,10 @@
         private System.Windows.Forms.Label labelmesa3;
         private System.Windows.Forms.Label labelmesa2;
         private System.Windows.Forms.Label labelmesa1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mENÚToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pERFILESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aCCIONESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cERRARToolStripMenuItem;
     }
 }
