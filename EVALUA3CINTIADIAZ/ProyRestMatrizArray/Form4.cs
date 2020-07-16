@@ -24,8 +24,8 @@ namespace ProyRestMatrizArray
 		//conexión a bdd
 
 		//CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
-		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\cintiaxdiaz\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\baseLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\cintiaxdiaz\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\baseLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
         private void Button2_Click(object sender, EventArgs e) {
 			if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
 				MessageBox.Show("No existe");
@@ -161,7 +161,7 @@ namespace ProyRestMatrizArray
             objeto_conect.Open();
             DataTable tabla_PERFILES = new DataTable();
 			//string apellido =  textBox6.Text;
-			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= like '%" + textBox6.Text +"%'", objeto_conect);
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat like '%" + textBox6.Text +"%'", objeto_conect);
 			//SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= '" + apellido + "'" ,  objeto_conect);
             tabla_PERFILES.Clear();
             sentencia.Fill(tabla_PERFILES);
