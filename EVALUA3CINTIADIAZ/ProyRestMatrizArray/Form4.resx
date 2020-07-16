@@ -1057,7 +1057,7 @@
         W+rPvh//2Q==
 </value>
   </data>
-  <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="groupBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAQEBAQEBAQFBQQGBgYGBgkIBwcICQ0KCgoKCg0UDQ8NDQ8N
         FBIWEhESFhIgGRcXGSAlHx4fJS0pKS05NjlLS2T/2wBDAQQEBAQEBAQFBQQGBgYGBgkIBwcICQ0KCgoK
@@ -1370,7 +1370,7 @@
         W+rPvh//2Q==
 </value>
   </data>
-  <data name="groupBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAQEBAQEBAQFBQQGBgYGBgkIBwcICQ0KCgoKCg0UDQ8NDQ8N
         FBIWEhESFhIgGRcXGSAlHx4fJS0pKS05NjlLS2T/2wBDAQQEBAQEBAQFBQQGBgYGBgkIBwcICQ0KCgoK
