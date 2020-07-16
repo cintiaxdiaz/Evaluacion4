@@ -168,6 +168,10 @@ namespace ProyRestMatrizArray
         private void GroupBox2_Enter(object sender, EventArgs e) {
 
         }
+
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
     }
     }
 
