@@ -69,11 +69,12 @@ namespace ProyRestMatrizArray
 		private void Button4_Click(object sender, EventArgs e) {
 			if (rutValido(textBox2.Text))
 			{
+				//insertar datos en la bdd por textbox
 				objeto_conect.Open();
 				DataTable tabla_perfiles = new DataTable();
 				string clav = textBox3.Text.Substring(0, 1) + textBox4.Text.Substring(0, 1) + textBox5.Text.Substring(0, 1) + textBox2.Text;
 				string sqlinsertar = "insert into PERFILESCINTIADIAZ (rut,nombre,ApPat,ApMat,clave,Nivel) values  ('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + clav + "'," + comboBox1.SelectedIndex + ")";
-				MessageBox.Show(sqlinsertar);
+				//MessageBox.Show(sqlinsertar);
 				SqlDataAdapter sentencia = new SqlDataAdapter(sqlinsertar, objeto_conect);
 				tabla_perfiles.Clear();
 				sentencia.Fill(tabla_perfiles);
@@ -134,7 +135,7 @@ namespace ProyRestMatrizArray
 	
 		
 		//insertar datos en la bdd por textbox
-		objeto_conect.Open();
+		/*objeto_conect.Open();
             DataTable tabla_perfiles = new DataTable();
             string clav = textBox3.Text.Substring(0, 1) + textBox4.Text.Substring(0,1) + textBox5.Text.Substring(0,1) + textBox2.Text;
             string sqlinsertar = "insert into PERFILESCINTIADIAZ (rut,nombre,ApPat,ApMat,clave,Nivel) values  ('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + clav + "'," + comboBox1.SelectedIndex + ")";
@@ -142,7 +143,7 @@ namespace ProyRestMatrizArray
             SqlDataAdapter sentencia = new SqlDataAdapter(sqlinsertar, objeto_conect);
             tabla_perfiles.Clear();
             sentencia.Fill(tabla_perfiles);
-            objeto_conect.Close();
+            objeto_conect.Close();*/
         }
         private void Button5_Click(object sender, EventArgs e) {
             //Muestra lo que está en la base de datos en el datagridview
@@ -158,8 +159,9 @@ namespace ProyRestMatrizArray
             //Búsqueda por apellido paterno con un textbox
             objeto_conect.Open();
             DataTable tabla_PERFILES = new DataTable();
-            string apellido = textBox6.Text;
-            SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat='" + apellido +"'" ,  objeto_conect);
+			//string apellido =  textBox6.Text;
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= like '%" + textBox6.Text +"%'", objeto_conect);
+			//SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= '" + apellido + "'" ,  objeto_conect);
             tabla_PERFILES.Clear();
             sentencia.Fill(tabla_PERFILES);
             dataGridView1.DataSource = tabla_PERFILES;
