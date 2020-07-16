@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Configuration;
+using System.Collections.Specialized;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,9 @@ namespace ProyRestMatrizArray
             InitializeComponent();
         }
         //conexión a bdd
-        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\baseLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+
+        //CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
+        SqlConnection objeto_conect = new SqlConnection(@ConfigurationManager.AppSettings.Get("BD"));
         private void Button2_Click(object sender, EventArgs e) {
             if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
                 MessageBox.Show("No existe");
@@ -158,6 +162,10 @@ namespace ProyRestMatrizArray
             leer.Close();
             MessageBox.Show("busqueda de traspaso exitosa");
             objeto_conect.Close();
+
+        }
+
+        private void GroupBox2_Enter(object sender, EventArgs e) {
 
         }
     }
