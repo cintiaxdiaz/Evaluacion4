@@ -24,8 +24,9 @@ namespace ProyRestMatrizArray
 		//conexión a bdd
 
 		//CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\cintiaxdiaz\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-		private void Button2_Click(object sender, EventArgs e) {
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\cintiaxdiaz\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\baseLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+        private void Button2_Click(object sender, EventArgs e) {
 			if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
 				MessageBox.Show("No existe");
 				return;
