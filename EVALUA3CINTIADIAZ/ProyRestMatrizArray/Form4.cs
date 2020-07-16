@@ -172,6 +172,10 @@ namespace ProyRestMatrizArray
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e) {
 
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
     }
     }
 
