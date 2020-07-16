@@ -107,16 +107,7 @@ namespace ProyRestMatrizArray
             objeto_conect.Close();
         }
         private void Button6_Click(object sender, EventArgs e) {
-            //Búsqueda por apellido paterno con un textbox
-            objeto_conect.Open();
-            DataTable tabla_PERFILES = new DataTable();
-			//string apellido =  textBox6.Text;
-			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat like '%" + textBox6.Text +"%'", objeto_conect);
-			//SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= '" + apellido + "'" ,  objeto_conect);
-            tabla_PERFILES.Clear();
-            sentencia.Fill(tabla_PERFILES);
-            dataGridView1.DataSource = tabla_PERFILES;
-            objeto_conect.Close(); 
+
         }
         private void Label7_Click_1(object sender, EventArgs e) {
         }
@@ -128,14 +119,15 @@ namespace ProyRestMatrizArray
 
         private void Button11_Click(object sender, EventArgs e) {
             //Búsqueda por apellido paterno con un textbox
-              objeto_conect.Open();
-              DataTable tabla_PERFILES = new DataTable();
-              string apellido = textBox10.Text;
-              SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat='" + apellido + "'", objeto_conect);
-              tabla_PERFILES.Clear();
-              sentencia.Fill(tabla_PERFILES);
-              dataGridView1.DataSource = tabla_PERFILES;
-              objeto_conect.Close();
+            objeto_conect.Open();
+            DataTable tabla_PERFILES = new DataTable();
+            //string apellido =  textBox6.Text;
+            SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat like '%" + textBox10.Text + "%'", objeto_conect);
+            //SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= '" + apellido + "'" ,  objeto_conect);
+            tabla_PERFILES.Clear();
+            sentencia.Fill(tabla_PERFILES);
+            dataGridView1.DataSource = tabla_PERFILES;
+            objeto_conect.Close();
         }
 
         private void Button10_Click(object sender, EventArgs e) {
@@ -157,16 +149,24 @@ namespace ProyRestMatrizArray
 
 		private void button13_Click(object sender, EventArgs e)
 		{
-			objeto_conect.Open();
-			DataTable tabla_PERFILES = new DataTable();
-			//string apellido =  textBox6.Text;
-			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave like '%" + textBox7.Text + "%'", objeto_conect);
-			//SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= '" + apellido + "'" ,  objeto_conect);
-			tabla_PERFILES.Clear();
-			sentencia.Fill(tabla_PERFILES);
-			dataGridView1.DataSource = tabla_PERFILES;
-			objeto_conect.Close();
+
 		}
-	}
-	}
+
+        private void Button2_Click_1(object sender, EventArgs e) {
+            objeto_conect.Open();
+            DataTable tabla_PERFILES = new DataTable();
+            //string apellido =  textBox6.Text;
+            SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave like '%" + textBox1.Text + "%'", objeto_conect);
+            //SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= '" + apellido + "'" ,  objeto_conect);
+            tabla_PERFILES.Clear();
+            sentencia.Fill(tabla_PERFILES);
+            dataGridView1.DataSource = tabla_PERFILES;
+            objeto_conect.Close();
+        }
+
+        private void TextBox1_TextChanged_1(object sender, EventArgs e) {
+
+        }
+    }
+}
     
