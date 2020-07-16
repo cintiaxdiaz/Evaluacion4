@@ -19,7 +19,7 @@ namespace ProyRestMatrizArray
         private void button_Click(object sender, EventArgs e) {
             Form F1 = new Form1();
             F1.Show();
-            this.Hide()
+            this.Hide();
         }
     }
 }
