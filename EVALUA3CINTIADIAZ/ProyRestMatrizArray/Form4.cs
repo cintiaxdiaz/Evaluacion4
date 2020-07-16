@@ -247,6 +247,20 @@ namespace ProyRestMatrizArray
 		{
 
 		}
+
+		private void button10_Click(object sender, EventArgs e)
+		{
+			objeto_conect.Open();
+			DataTable tabla_PERFILES = new DataTable();
+			//string apellido =  textBox6.Text;
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave like '%" + textBox7.Text + "%'", objeto_conect);
+			//SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat= '" + apellido + "'" ,  objeto_conect);
+			tabla_PERFILES.Clear();
+			sentencia.Fill(tabla_PERFILES);
+			dataGridView1.DataSource = tabla_PERFILES;
+			objeto_conect.Close();
+		}
 	}
-    }
+	}
+    
 

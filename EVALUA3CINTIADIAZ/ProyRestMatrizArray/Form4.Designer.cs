@@ -59,6 +59,7 @@
 			this.button7 = new System.Windows.Forms.Button();
 			this.label7 = new System.Windows.Forms.Label();
 			this.label11 = new System.Windows.Forms.Label();
+			this.button10 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
@@ -331,6 +332,7 @@
 			// groupBox3
 			// 
 			this.groupBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox3.BackgroundImage")));
+			this.groupBox3.Controls.Add(this.button10);
 			this.groupBox3.Controls.Add(this.label10);
 			this.groupBox3.Controls.Add(this.button9);
 			this.groupBox3.Controls.Add(this.textBox8);
@@ -444,6 +446,18 @@
 			this.label11.TabIndex = 54;
 			this.label11.Text = "TABLA";
 			// 
+			// button10
+			// 
+			this.button10.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
+			this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button10.Location = new System.Drawing.Point(302, 95);
+			this.button10.Name = "button10";
+			this.button10.Size = new System.Drawing.Size(92, 31);
+			this.button10.TabIndex = 54;
+			this.button10.Text = "BUSCAR";
+			this.button10.UseVisualStyleBackColor = true;
+			this.button10.Click += new System.EventHandler(this.button10_Click);
+			// 
 			// Form4
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,5 +520,6 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-    }
+		private System.Windows.Forms.Button button10;
+	}
 }
