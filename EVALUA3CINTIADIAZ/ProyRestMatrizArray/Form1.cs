@@ -11,8 +11,9 @@ using System.Text.RegularExpressions;
 
 namespace ProyRestMatrizArray
 {
-    public partial class Form1 : For
-    {//PAblo
+    public partial class Form1 : Form
+
+    {
         public Form1()
         {
             InitializeComponent();
