@@ -83,6 +83,16 @@ namespace ProyRestMatrizArray.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap profe_luis {
+            get {
+                object obj = ResourceManager.GetObject("profe_luis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap triangle_abstract_gradient_soft_gradient_wallpaper_preview {
             get {
                 object obj = ResourceManager.GetObject("triangle-abstract-gradient-soft-gradient-wallpaper-preview", resourceCulture);
