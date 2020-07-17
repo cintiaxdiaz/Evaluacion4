@@ -53,7 +53,6 @@
             this.textBoxUsuario.TabIndex = 0;
             this.textBoxUsuario.Text = "Usuario";
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxUsuario.TextChanged += new System.EventHandler(this.TextBoxUsuario_TextChanged);
             // 
             // textBoxPassUsuario
             // 
@@ -89,7 +88,6 @@
             this.hora.Size = new System.Drawing.Size(60, 29);
             this.hora.TabIndex = 3;
             this.hora.Text = "Hora";
-            this.hora.Click += new System.EventHandler(this.Hora_Click);
             // 
             // fecha
             // 
@@ -162,7 +160,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
