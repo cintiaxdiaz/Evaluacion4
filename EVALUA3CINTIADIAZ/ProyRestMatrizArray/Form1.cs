@@ -32,17 +32,16 @@ namespace ProyRestMatrizArray
 			int total = tabla_transito.Rows.Count;
 			if (total < 1)
 			{
-				MessageBox.Show("Clave o usuario inválido");
+                objeto_conect.Close();
+                MessageBox.Show("Clave o usuario inválido");
                 return;
 			}
 				
-					USUARIO usua = new USUARIO(textBoxRut.Text);
-					Form formulario = new Form2(usua);
-					formulario.Show();
-					Visible = false;
-					MessageBox.Show("BIENVENIDO, QUE TENGAS UN EXCELENTE DÍA!");
-				
-			
+		    USUARIO usua = new USUARIO(textBoxRut.Text);
+		    Form formulario = new Form2(usua);
+		    formulario.Show();
+		    Visible = false;
+		    MessageBox.Show("BIENVENIDO, QUE TENGAS UN EXCELENTE DÍA!");
 			objeto_conect.Close();
 		}
 

@@ -33,6 +33,19 @@ namespace ProyRestMatrizArray
         }
        
         private void Button4_Click(object sender, EventArgs e) {
+            objeto_conect.Open();
+            DataTable tabla_transito = new DataTable();
+            SqlDataAdapter sentencia1 = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where rut ='" + textBox2.Text + "'", objeto_conect);
+            tabla_transito.Clear();
+            sentencia1.Fill(tabla_transito);
+            objeto_conect.Close();
+
+            int total = tabla_transito.Rows.Count;
+            if (total >= 1) {
+                MessageBox.Show("Usuario ya registrado");
+                return;
+            }
+
             if (rutValido(textBox2.Text)) {
                 objeto_conect.Open();
                 DataTable tabla_perfiles = new DataTable();
@@ -145,7 +158,7 @@ namespace ProyRestMatrizArray
 			//Búsqueda por apellido paterno con un textbox
 			objeto_conect.Open();
 			DataTable tabla_PERFILES = new DataTable();
-			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat like '%" + textBox4.Text + "%'", objeto_conect);
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where ApPat like '%" + textBox6.Text + "%'", objeto_conect);
 			tabla_PERFILES.Clear();
 			sentencia.Fill(tabla_PERFILES);
 			dataGridView1.DataSource = tabla_PERFILES;
@@ -172,6 +185,10 @@ namespace ProyRestMatrizArray
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void TextBox6_TextChanged(object sender, EventArgs e) {
 
         }
     }
