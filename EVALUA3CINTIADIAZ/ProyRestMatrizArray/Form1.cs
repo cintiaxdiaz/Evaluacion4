@@ -25,10 +25,12 @@ namespace ProyRestMatrizArray
 			objeto_conect.Open();
 			DataTable tabla_transito = new DataTable();
 
-			string rut = textBoxPassUsuario.Text;
+			
+			string clave = textBoxClave.Text;
 
 			SqlDataAdapter sentencia = new SqlDataAdapter
-			("select * from PERFILESCINTIADIAZ where rut='" + rut + "'", objeto_conect);
+			("select * from PERFILESCINTIADIAZ where clave='" + clave + "'", objeto_conect);
+			
 
 			tabla_transito.Clear();
 			sentencia.Fill(tabla_transito);
@@ -41,9 +43,9 @@ namespace ProyRestMatrizArray
 			else
 			{
 				MessageBox.Show("Usuario Validado en nuestra base de datos");
-				if (rutValido(textBoxPassUsuario.Text))
+				if (rutValido(textBoxRut.Text))
 				{
-					USUARIO usua = new USUARIO(textBoxPassUsuario.Text);
+					USUARIO usua = new USUARIO(textBoxRut.Text);
 					Form formulario = new Form2(usua);
 					formulario.Show();
 					Visible = false;
