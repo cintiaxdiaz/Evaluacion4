@@ -16,15 +16,13 @@ namespace ProyRestMatrizArray
             InitializeComponent();
             this.MaximizeBox = false;
         }
-
-        private void FormInicio_Load(object sender, EventArgs e) {
-
-        }
+		
 
         private void btnIrAIngreso_Click(object sender, EventArgs e) {
             Form F1 = new Form1();
             F1.Show();
             this.Hide();
         }
-    }
+
+	}
 }
