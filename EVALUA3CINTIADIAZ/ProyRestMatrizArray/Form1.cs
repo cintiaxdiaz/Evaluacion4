@@ -8,19 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace ProyRestMatrizArray
 {
     public partial class Form1 : Form
 
     {
-        public Form1()
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+
+		public Form1()
         {
             InitializeComponent();
         }
         private void buttonIngresar_Click(object sender, EventArgs e)
         {
-            if (rutValido(textBoxPassUsuario.Text)) {
+
+			objeto_conect.Open();
+			DataTable tabla_PERFILES = new DataTable();
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where rut like '%" + textBoxPassUsuario .Text + "%'", objeto_conect);
+			tabla_PERFILES.Clear();
+			sentencia.Fill(tabla_PERFILES);
+			objeto_conect.Close();
+
+
+
+			if (rutValido(textBoxPassUsuario.Text)) {
                 USUARIO usua = new  USUARIO(textBoxPassUsuario.Text);
                 Form formulario = new Form2(usua);
                 formulario.Show();
