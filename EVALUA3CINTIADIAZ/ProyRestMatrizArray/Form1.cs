@@ -14,9 +14,10 @@ namespace ProyRestMatrizArray
 {
 	public partial class Form1 : Form
 	{
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 
-		public Form1()
+        public Form1()
 		{
 			InitializeComponent();
 		}
@@ -24,38 +25,24 @@ namespace ProyRestMatrizArray
 		{
 			objeto_conect.Open();
 			DataTable tabla_transito = new DataTable();
-
-			
 			string clave = textBoxClave.Text;
-
-			SqlDataAdapter sentencia = new SqlDataAdapter
-			("select * from PERFILESCINTIADIAZ where clave='" + clave + "'", objeto_conect);
-			
-
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave='" + clave + "' and rut ='" + textBoxRut.Text + "'", objeto_conect);
 			tabla_transito.Clear();
 			sentencia.Fill(tabla_transito);
-
 			int total = tabla_transito.Rows.Count;
 			if (total < 1)
 			{
-				MessageBox.Show("No te encuentras en nuestra base de datos");
+				MessageBox.Show("Clave o usuario inválido");
+                return;
 			}
-			else
-			{
-				MessageBox.Show("Usuario Validado en nuestra base de datos");
-				if (rutValido(textBoxRut.Text))
-				{
+				
 					USUARIO usua = new USUARIO(textBoxRut.Text);
 					Form formulario = new Form2(usua);
 					formulario.Show();
 					Visible = false;
 					MessageBox.Show("BIENVENIDO, QUE TENGAS UN EXCELENTE DÍA!");
-				}
-				else
-				{
-					MessageBox.Show("Usuario o contraseña incorrecta");
-				}
-			}
+				
+			
 			objeto_conect.Close();
 		}
 
