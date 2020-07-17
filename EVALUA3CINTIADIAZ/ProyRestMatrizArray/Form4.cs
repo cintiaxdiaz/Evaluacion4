@@ -23,9 +23,9 @@ namespace ProyRestMatrizArray
 		//conexión a bdd
 
 		//CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-		// SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\baseLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-		private void Button2_Click(object sender, EventArgs e) {
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+        private void Button2_Click(object sender, EventArgs e) {
          
         }
         private void Button1_Click(object sender, EventArgs e) {
@@ -38,11 +38,19 @@ namespace ProyRestMatrizArray
                 DataTable tabla_perfiles = new DataTable();
                 string clav = textBox3.Text.Substring(0, 1) + textBox4.Text.Substring(0, 1) + textBox5.Text.Substring(0, 1) + textBox2.Text;
                 string sqlinsertar = "insert into PERFILESCINTIADIAZ (rut,nombre,ApPat,ApMat,clave,Nivel) values  ('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + clav + "'," + comboBox1.SelectedIndex + ")";
-			
-				MessageBox.Show(sqlinsertar);
                 SqlDataAdapter sentencia = new SqlDataAdapter(sqlinsertar, objeto_conect);
                 tabla_perfiles.Clear();
                 sentencia.Fill(tabla_perfiles);
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+                textBox5.Text = "";
+                comboBox1.Text = "";
+                DataTable tabla_PERFILES = new DataTable();
+                sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
+                tabla_PERFILES.Clear();
+                sentencia.Fill(tabla_PERFILES);
+                dataGridView1.DataSource = tabla_PERFILES;
                 objeto_conect.Close();
                 MessageBox.Show("Rut Valido, datos agregados exitosamente");
             } else {
@@ -88,14 +96,7 @@ namespace ProyRestMatrizArray
             return digito == digitoVer;
         }
         private void Button5_Click(object sender, EventArgs e) {
-            //Muestra lo que está en la base de datos en el datagridview
-            objeto_conect.Open();
-            DataTable tabla_PERFILES = new DataTable();
-            SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
-            tabla_PERFILES.Clear();
-            sentencia.Fill(tabla_PERFILES);
-            dataGridView1.DataSource = tabla_PERFILES;
-            objeto_conect.Close();
+    
         }
 
 
@@ -108,7 +109,13 @@ namespace ProyRestMatrizArray
           MessageBox.Show("Eliminado");
           tabla_PERFILES.Clear();
           sentencia.Fill(tabla_PERFILES);
-		  objeto_conect.Close();
+            textBox1.Text = "";
+            tabla_PERFILES = new DataTable();
+            sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
+            tabla_PERFILES.Clear();
+            sentencia.Fill(tabla_PERFILES);
+            dataGridView1.DataSource = tabla_PERFILES;
+            objeto_conect.Close();
         }
 
 		private void button2_Click_1(object sender, EventArgs e)
@@ -144,6 +151,29 @@ namespace ProyRestMatrizArray
 			dataGridView1.DataSource = tabla_PERFILES;
 			objeto_conect.Close();
 		}
-	}
+
+        private void TextBox2_TextChanged(object sender, EventArgs e) {
+            
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e) {
+
+        }
+
+        private void Form4_Load(object sender, EventArgs e) {
+            objeto_conect.Open();
+            DataTable tabla_PERFILES = new DataTable();
+            SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
+            tabla_PERFILES.Clear();
+            sentencia.Fill(tabla_PERFILES);
+            dataGridView1.DataSource = tabla_PERFILES;
+            objeto_conect.Close();
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+    }
 }
     

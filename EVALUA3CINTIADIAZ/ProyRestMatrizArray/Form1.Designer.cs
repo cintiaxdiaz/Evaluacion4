@@ -49,7 +49,7 @@
             this.textBoxUsuario.Location = new System.Drawing.Point(259, 199);
             this.textBoxUsuario.Multiline = true;
             this.textBoxUsuario.Name = "textBoxUsuario";
-            this.textBoxUsuario.Size = new System.Drawing.Size(174, 39);
+            this.textBoxUsuario.Size = new System.Drawing.Size(174, 33);
             this.textBoxUsuario.TabIndex = 0;
             this.textBoxUsuario.Text = "Usuario";
             this.textBoxUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -61,7 +61,7 @@
             this.textBoxPassUsuario.Location = new System.Drawing.Point(259, 260);
             this.textBoxPassUsuario.Multiline = true;
             this.textBoxPassUsuario.Name = "textBoxPassUsuario";
-            this.textBoxPassUsuario.Size = new System.Drawing.Size(173, 39);
+            this.textBoxPassUsuario.Size = new System.Drawing.Size(173, 35);
             this.textBoxPassUsuario.TabIndex = 1;
             this.textBoxPassUsuario.Text = "Contraseña";
             this.textBoxPassUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
