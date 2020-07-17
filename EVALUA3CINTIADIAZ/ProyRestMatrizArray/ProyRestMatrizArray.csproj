@@ -183,6 +183,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>BDDPROG2CINTIADIAZ.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\logo instituto 2.png" />
+    <None Include="Resources\integrantes grupo.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
