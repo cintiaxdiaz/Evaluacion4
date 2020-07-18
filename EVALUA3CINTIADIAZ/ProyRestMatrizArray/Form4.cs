@@ -16,15 +16,15 @@ using System.Text.RegularExpressions;
 
 namespace ProyRestMatrizArray
 {
-    public partial class Form4 : Form {
-        public Form4() {
+    public partial class FormPerfiles : Form {
+        public FormPerfiles() {
             InitializeComponent();
         }
         //conexión a bdd
 
         //CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
-       // SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+       SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+       // SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
         //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pablosotosaavedra\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
         private void Button2_Click(object sender, EventArgs e) {
          
@@ -151,56 +151,7 @@ namespace ProyRestMatrizArray
                 dataGridView1.DataSource = tabla_PERFILES;
                 objeto_conect.Close();
 			}
-
-			//elimina por campo clave
-			/*objeto_conect.Open();
-			DataTable tabla_PERFILES = new DataTable();
-			string claves = textBox1.Text;
-			SqlDataAdapter sentencia = new SqlDataAdapter("delete from PERFILESCINTIADIAZ where clave='" + claves + "'", objeto_conect);
-			//MessageBox.Show("Eliminado");
-			tabla_PERFILES.Clear();
-			sentencia.Fill(tabla_PERFILES);
-			textBox1.Text = "";
-			tabla_PERFILES = new DataTable();
-			sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
-			tabla_PERFILES.Clear();
-			sentencia.Fill(tabla_PERFILES);
-			dataGridView1.DataSource = tabla_PERFILES;
-
-			int total = tabla_transito.Rows.Count;
-			if (total < 1)
-			{
-				MessageBox.Show("La Clave Ingresada NO EXISTE!!!");
-				objeto_conect.Close();
-			}
-			else
-			{
-
-				for (int i = 0; i < total; i++)
-				{
-					textBox2.Text = tabla_transito.Rows[i]["rut"].ToString();
-					textBox3.Text = tabla_transito.Rows[i]["nombre"].ToString();
-					textBox4.Text = tabla_transito.Rows[i]["ApPat"].ToString();
-					textBox5.Text = tabla_transito.Rows[i]["ApMat"].ToString();
-					comboBox1.Text = tabla_transito.Rows[i]["Nivel"].ToString();
-
-				}
-				MessageBox.Show("Datos encontrados y mostrados en Texbox!!!");
-				objeto_conect.Close();
-			}
-
-		}
-
-		private void button3_Click(object sender, EventArgs e)
-		{//btn buscar clave y mostrar en datagrid
-			objeto_conect.Open();
-			DataTable tabla_PERFILES = new DataTable();
-			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave = '%" + textBox1.Text + "%'", objeto_conect);
-			tabla_PERFILES.Clear();
-			sentencia.Fill(tabla_PERFILES);
-			dataGridView1.DataSource = tabla_PERFILES;
-			objeto_conect.Close();
-			*/
+			
 		}
 
 		private void button2_Click_2(object sender, EventArgs e)
@@ -214,10 +165,9 @@ namespace ProyRestMatrizArray
 			dataGridView1.DataSource = tabla_PERFILES;
 			objeto_conect.Close();
 		}
-
-       
-
+		
         private void Form4_Load(object sender, EventArgs e) {
+			//muestra al cargar el formulario
             objeto_conect.Open();
             DataTable tabla_PERFILES = new DataTable();
             SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);

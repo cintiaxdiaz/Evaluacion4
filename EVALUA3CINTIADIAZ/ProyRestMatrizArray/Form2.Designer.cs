@@ -281,7 +281,6 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "MESAS";
-            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // labelmesa1
             // 
@@ -523,7 +522,6 @@
             this.mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
             this.mENÚToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.mENÚToolStripMenuItem.Text = "MENÚ";
-            this.mENÚToolStripMenuItem.Click += new System.EventHandler(this.MENÚToolStripMenuItem_Click);
             // 
             // pERFILESToolStripMenuItem
             // 

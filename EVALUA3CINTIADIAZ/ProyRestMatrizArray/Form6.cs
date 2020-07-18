@@ -50,9 +50,6 @@ namespace ProyRestMatrizArray
             MessageBox.Show("Traspaso exitoso");
 
         }
-
-        private void Form6_Load(object sender, EventArgs e) {
-
-        }
+		
     }
 }

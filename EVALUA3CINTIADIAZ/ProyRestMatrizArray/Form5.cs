@@ -36,7 +36,6 @@ namespace ProyRestMatrizArray
                 buscar = leer.ReadLine();
             }
             leer.Close();
-        
     }
 
         private void Button2_Click(object sender, EventArgs e) {
@@ -52,14 +51,6 @@ namespace ProyRestMatrizArray
                 mostrar = leer.ReadLine();
             }
             leer.Close();
-        }
-
-        private void Button6_Click(object sender, EventArgs e) {
-         
-        }
-
-        private void Button7_Click(object sender, EventArgs e) {
-            
         }
 
         private void Button9_Click(object sender, EventArgs e) {
@@ -117,20 +108,8 @@ namespace ProyRestMatrizArray
 
         }
 
-        private void Button1_Click(object sender, EventArgs e) {
-        }
-
         private void Button4_Click(object sender, EventArgs e) {
             Visible = false;
-
-        }
-
-        private void Form5_Load(object sender, EventArgs e) {
-
-        }
-
-        private void TextBox1_TextChanged(object sender, EventArgs e) {
-
         }
     }
 }

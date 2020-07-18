@@ -82,8 +82,7 @@ namespace ProyRestMatrizArray
             AgregarEvento(eventostring);   
             Visible = false;
         }
-        private void Button1_Click_1(object sender, EventArgs e) {
-        }
+        
         private void Button2_Click(object sender, EventArgs e) {
             string eventostring = "Se eliminó ";
             if (MessageBox.Show("Estas Seguro?", "ELIMINAR", MessageBoxButtons.YesNo,
@@ -118,8 +117,7 @@ namespace ProyRestMatrizArray
             eventostring = eventostring + "En la mesa " + coordenadas;
             AgregarEvento(eventostring);
         }
-        private void Form3_Load(object sender, EventArgs e) {
-        }
+        
     }
   }
 

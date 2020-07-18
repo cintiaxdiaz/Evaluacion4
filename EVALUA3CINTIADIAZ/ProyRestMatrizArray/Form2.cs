@@ -171,27 +171,22 @@ namespace ProyRestMatrizArray
             if (!usuario.is_admin()) {
 
                 pERFILESToolStripMenuItem.Enabled = false;
+				MessageBox.Show("No posee los privilegios necesarios, para ingresar a Perfiles");
+			}
+			else
+			{
+				MessageBox.Show("Eres Administrador");
+			}
 
-            }
-
         }
-        private void GroupBox1_Enter(object sender, EventArgs e) {
-        }
-        private void Button3_Click(object sender, EventArgs e) {
-        }
-        private void Button2_Click(object sender, EventArgs e) {
-        }
-        private void Label1_Click(object sender, EventArgs e) {
-        }
-        private void TextBox1_TextChanged(object sender, EventArgs e) {
-        }
+        
         private void Button4_Click(object sender, EventArgs e) {
            // Form formulario = new Form4();
             //formulario.Show();
         }
 
         private void PERFILESToolStripMenuItem_Click(object sender, EventArgs e) {
-            Form formulario = new Form4();
+            Form formulario = new FormPerfiles();
             formulario.Show();
         }
 
@@ -204,10 +199,7 @@ namespace ProyRestMatrizArray
             Form formulario = new Form5();
             formulario.Show();
         }
-
-        private void MENÚToolStripMenuItem_Click(object sender, EventArgs e) {
-
-        }
+		
     }
 }
 
