@@ -20,11 +20,12 @@ namespace ProyRestMatrizArray
         public Form4() {
             InitializeComponent();
         }
-		//conexión a bdd
+        //conexión a bdd
 
-		//CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
-		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+        //CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
+        //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+        //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pablosotosaavedra\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
         private void Button2_Click(object sender, EventArgs e) {
          
         }
@@ -189,6 +190,53 @@ namespace ProyRestMatrizArray
         }
 
         private void TextBox6_TextChanged(object sender, EventArgs e) {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+
+            //SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where= clave '%" + textBox1.Text + "%'", objeto_conect);
+            {
+                objeto_conect.Open();
+                DataTable tabla_transito = new DataTable();
+
+                string rut = textBox1.Text;
+                //llama datos de la tabla "perfiles" el campo "rut" del rut del trabajador
+                SqlDataAdapter sentencia = new SqlDataAdapter
+                ("select * from PERFILESCINTIADIAZ where clave='" + rut + "'", objeto_conect);
+
+                tabla_transito.Clear();
+                sentencia.Fill(tabla_transito);
+
+                int total = tabla_transito.Rows.Count;
+                if (total < 1)
+                {
+                    MessageBox.Show("La Clave Ingresada NO EXISTE!!!");
+                    objeto_conect.Close();
+                }
+                else
+                {
+                    
+                    for (int i = 0; i < total; i++)
+                    {
+                        textBox2.Text = tabla_transito.Rows[i]["rut"].ToString();
+                        textBox3.Text = tabla_transito.Rows[i]["nombre"].ToString();
+                        textBox4.Text = tabla_transito.Rows[i]["ApPat"].ToString();
+                        textBox5.Text = tabla_transito.Rows[i]["ApMat"].ToString();
+                        comboBox1.Text = tabla_transito.Rows[i]["Nivel"].ToString();
+
+                    }
+                    MessageBox.Show("Datos encontrados y mostrados en Texbox!!!");
+                    objeto_conect.Close();
+                }
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            
 
         }
     }
