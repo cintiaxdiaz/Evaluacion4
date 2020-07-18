@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyRestMatrizArray
 {
-    public partial class Form3 : Form
+    public partial class FormPedidos : Form
     {
         //Un arreglo de las comidas
         Mesa mesa;
-        Form2 form2;
+        FormMesas form2;
         USUARIO usuaform3;
         List <CLASEEVALUA2CintiaDiaz> LISTAEVALUA2;
         string coordenadas;
@@ -24,14 +24,14 @@ namespace ProyRestMatrizArray
             "Lasaña", "Hamburguesa de la casa", "Hot dog CIJOSE", "Papas fritas", "Agua", "Coca-cola",
             "Fanta", "Limonada frapp","Cerveza", "Pisco", "Mojito", "Cuba libre"
         };
-        public Form3() {
+        public FormPedidos() {
             InitializeComponent();
         }
         private void AgregarEvento(string descripEvento) {
             CLASEEVALUA2CintiaDiaz evento = new CLASEEVALUA2CintiaDiaz(usuaform3, descripEvento);
             LISTAEVALUA2.Add(evento);
         }
-        public Form3(Mesa table, Form2 form_2, USUARIO USUA3, List<CLASEEVALUA2CintiaDiaz> listformtres, string coordenadas1) {
+        public FormPedidos(Mesa table, FormMesas form_2, USUARIO USUA3, List<CLASEEVALUA2CintiaDiaz> listformtres, string coordenadas1) {
             LISTAEVALUA2 = listformtres;
             usuaform3 = USUA3;
             coordenadas = coordenadas1;

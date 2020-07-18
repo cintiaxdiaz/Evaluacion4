@@ -13,9 +13,9 @@ using System.Text.RegularExpressions;
 
 namespace ProyRestMatrizArray
 {
-    public partial class Form6 : Form
+    public partial class FormAcciones : Form
     {
-        public Form6() {
+        public FormAcciones() {
             InitializeComponent();
         }
         SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");

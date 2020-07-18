@@ -43,7 +43,7 @@ namespace ProyRestMatrizArray
             string rut_tabla = tabla_transito.Rows[0]["rut"].ToString();
             int nivel_tabla = Int32.Parse(tabla_transito.Rows[0]["Nivel"].ToString());
             USUARIO usua = new USUARIO(rut_tabla, nivel_tabla);
-		    Form formulario = new Form2(usua);
+		    Form formulario = new FormMesas(usua);
 		    formulario.Show();
 		    Visible = false;
 		    MessageBox.Show("BIENVENIDO, QUE TENGAS UN EXCELENTE DÍA!");

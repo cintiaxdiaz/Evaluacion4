@@ -11,12 +11,12 @@ using System.IO;
 
 namespace ProyRestMatrizArray
 {
-    public partial class Form2 : Form
+    public partial class FormMesas : Form
     {   //Declaración de la matriz
         Mesa[,] mesas;
         USUARIO usuario;
         List<CLASEEVALUA2CintiaDiaz> LISTAEVALUA2;
-        public Form2(USUARIO usuaform2) {
+        public FormMesas(USUARIO usuaform2) {
             LISTAEVALUA2 = new List<CLASEEVALUA2CintiaDiaz>();
             usuario = usuaform2;
 
@@ -40,7 +40,7 @@ namespace ProyRestMatrizArray
             //Se asignan la mesa al formulario tres
             AgregarEvento("[0;0]");
             Mesa mesita = mesas[0, 0];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[0;0]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[0;0]");
             formulario.Show();
         }
         private void Horayfecha_Tick(object sender, EventArgs e) {
@@ -50,7 +50,7 @@ namespace ProyRestMatrizArray
         private void BtnMesa2_Click(object sender, EventArgs e) {
             AgregarEvento("[0;1]");
             Mesa mesita = mesas[0, 1];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[0;1]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[0;1]");
             formulario.Show();
         }
         private void Button1_Click(object sender, EventArgs e) {
@@ -74,79 +74,79 @@ namespace ProyRestMatrizArray
         private void btnMesa3_Click(object sender, EventArgs e) {
             AgregarEvento("[0;2]");
             Mesa mesita = mesas[0, 2];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[0;2]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[0;2]");
             formulario.Show();
         }
         private void btnMesa4_Click(object sender, EventArgs e) {
             AgregarEvento("[0;3]");
             Mesa mesita = mesas[0, 3];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[0;3]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[0;3]");
             formulario.Show();
         }
         private void btnMesa5_Click(object sender, EventArgs e) {
             AgregarEvento("[0;4]");
             Mesa mesita = mesas[0, 4];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[0;4]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[0;4]");
             formulario.Show();
         }
         private void btnMesa6_Click(object sender, EventArgs e) {
             AgregarEvento("[1;0]");
             Mesa mesita = mesas[1, 0];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[1;0]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[1;0]");
             formulario.Show();
         }
         private void btnMesa7_Click(object sender, EventArgs e) {
             AgregarEvento("[1;1]");
             Mesa mesita = mesas[1, 1];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[1;1]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[1;1]");
             formulario.Show();
         }
         private void btnMesa8_Click(object sender, EventArgs e) {
             AgregarEvento("[1;2]");
             Mesa mesita = mesas[1, 2];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[1;2]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[1;2]");
             formulario.Show();
         }
         private void btnMesa9_Click(object sender, EventArgs e) {
             AgregarEvento("[1;3]");
             Mesa mesita = mesas[1, 3];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[1;3]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[1;3]");
             formulario.Show();
         }
         private void btnMesa10_Click(object sender, EventArgs e) {
             AgregarEvento("[1;4]");
             Mesa mesita = mesas[1, 4];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[1;4]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[1;4]");
             formulario.Show();
         }
         private void btnMesa11_Click(object sender, EventArgs e) {
             AgregarEvento("[2;0]");
             Mesa mesita = mesas[2, 0];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[2;0]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[2;0]");
             formulario.Show();
         }
         private void btnMesa12_Click(object sender, EventArgs e) {
             AgregarEvento("[2;1]");
             Mesa mesita = mesas[2, 1];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[2;1]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[2;1]");
             formulario.Show();
         }
         private void btnMesa13_Click(object sender, EventArgs e) {
             AgregarEvento("[2;2]");
             Mesa mesita = mesas[2, 2];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[2;2]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[2;2]");
             formulario.Show();
         }
         private void btnMesa14_Click(object sender, EventArgs e) {
             AgregarEvento("[2;3]");
             Mesa mesita = mesas[2, 3];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[2;3]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[2;3]");
             formulario.Show();
         }
         private void btnMesa15_Click(object sender, EventArgs e) {
             AgregarEvento("[2;4]");
             Mesa mesita = mesas[2, 4];
-            Form formulario = new Form3(mesita, this, usuario, LISTAEVALUA2, "[2;4]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[2;4]");
             formulario.Show();
         }
         public void ActualizarDisponible() {
@@ -191,12 +191,12 @@ namespace ProyRestMatrizArray
         }
 
         private void ACCIONESToolStripMenuItem_Click(object sender, EventArgs e) {
-            Form formulario = new Form6();
+            Form formulario = new FormAcciones();
             formulario.Show();
         }
 
         private void CERRARToolStripMenuItem_Click(object sender, EventArgs e) {
-            Form formulario = new Form5();
+            Form formulario = new FormVigia();
             formulario.Show();
         }
 		

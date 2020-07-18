@@ -81,23 +81,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLASEEVALUA2CintiaDiaz.cs" />
-    <Compile Include="Form4.cs">
+    <Compile Include="FormPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <Compile Include="FormPerfiles.Designer.cs">
+      <DependentUpon>FormPerfiles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5.cs">
+    <Compile Include="FormVigia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5.Designer.cs">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <Compile Include="FormVigia.Designer.cs">
+      <DependentUpon>FormVigia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="FormAcciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="FormAcciones.Designer.cs">
+      <DependentUpon>FormAcciones.cs</DependentUpon>
     </Compile>
     <Compile Include="FormInicio.cs">
       <SubType>Form</SubType>
@@ -106,44 +106,44 @@
       <DependentUpon>FormInicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Mesa.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="FormAcceso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormAcceso.Designer.cs">
+      <DependentUpon>FormAcceso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="FormMesas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="FormMesas.Designer.cs">
+      <DependentUpon>FormMesas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="FormPedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="FormPedidos.Designer.cs">
+      <DependentUpon>FormPedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="USUARIO.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormAcceso.resx">
+      <DependentUpon>FormAcceso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="FormMesas.resx">
+      <DependentUpon>FormMesas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="FormPedidos.resx">
+      <DependentUpon>FormPedidos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
+    <EmbeddedResource Include="FormPerfiles.resx">
+      <DependentUpon>FormPerfiles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5.resx">
-      <DependentUpon>Form5.cs</DependentUpon>
+    <EmbeddedResource Include="FormVigia.resx">
+      <DependentUpon>FormVigia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="FormAcciones.resx">
+      <DependentUpon>FormAcciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormInicio.resx">
       <DependentUpon>FormInicio.cs</DependentUpon>
