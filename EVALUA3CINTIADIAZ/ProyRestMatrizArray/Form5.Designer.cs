@@ -133,7 +133,7 @@
             this.button9.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.Black;
-            this.button9.Location = new System.Drawing.Point(261, 69);
+            this.button9.Location = new System.Drawing.Point(261, 75);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(146, 36);
             this.button9.TabIndex = 52;
@@ -154,7 +154,7 @@
             this.button8.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(154, 145);
+            this.button8.Location = new System.Drawing.Point(154, 158);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(173, 36);
             this.button8.TabIndex = 48;

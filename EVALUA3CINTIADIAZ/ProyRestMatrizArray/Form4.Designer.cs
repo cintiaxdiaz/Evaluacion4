@@ -34,6 +34,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -49,8 +51,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -163,6 +163,29 @@
             this.groupBox3.TabIndex = 44;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "INGRESAR CLAVE";
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(135, 139);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(123, 67);
+            this.button6.TabIndex = 54;
+            this.button6.Text = "MODIFICAR DATOS DE TEXBOX";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(8, 139);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(121, 67);
+            this.button5.TabIndex = 53;
+            this.button5.Text = "BUSCAR MOSTRAR EN TEXBOX";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // button3
             // 
@@ -299,29 +322,6 @@
             this.label11.Size = new System.Drawing.Size(56, 16);
             this.label11.TabIndex = 54;
             this.label11.Text = "TABLA";
-            // 
-            // button5
-            // 
-            this.button5.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(8, 139);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(121, 67);
-            this.button5.TabIndex = 53;
-            this.button5.Text = "BUSCAR MOSTRAR EN TEXBOX";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(135, 139);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(123, 67);
-            this.button6.TabIndex = 54;
-            this.button6.Text = "MODIFICAR DATOS DE TEXBOX";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // Form4
             // 

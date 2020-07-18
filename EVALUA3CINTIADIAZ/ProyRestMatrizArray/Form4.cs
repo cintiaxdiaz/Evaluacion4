@@ -66,9 +66,9 @@ namespace ProyRestMatrizArray
                 sentencia.Fill(tabla_PERFILES);
                 dataGridView1.DataSource = tabla_PERFILES;
                 objeto_conect.Close();
-                MessageBox.Show("Rut Valido, datos agregados exitosamente");
+                MessageBox.Show("RUT válido, datos agregados exitosamente");
             } else {
-                MessageBox.Show("Rut Invalido");
+                MessageBox.Show("RUT inválido");
             }
         }
 
@@ -142,7 +142,14 @@ namespace ProyRestMatrizArray
 				("delete from PERFILESCINTIADIAZ where clave='" + clave + "'", objeto_conect);
 				tabla_transito.Clear();
 				sentencia2.Fill(tabla_transito);
-				objeto_conect.Close();
+
+                //actualiza datagridview
+                DataTable tabla_PERFILES = new DataTable();
+                sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
+                tabla_PERFILES.Clear();
+                sentencia.Fill(tabla_PERFILES);
+                dataGridView1.DataSource = tabla_PERFILES;
+                objeto_conect.Close();
 			}
 
 			//elimina por campo clave
