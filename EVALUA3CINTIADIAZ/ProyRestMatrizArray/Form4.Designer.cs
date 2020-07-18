@@ -78,7 +78,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(655, 230);
             this.dataGridView1.TabIndex = 28;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // button4
             // 
@@ -115,7 +114,6 @@
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "PERFILES";
-            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -137,7 +135,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(115, 28);
             this.textBox6.TabIndex = 52;
-            this.textBox6.TextChanged += new System.EventHandler(this.TextBox6_TextChanged);
             // 
             // button2
             // 
@@ -177,7 +174,6 @@
             this.button3.TabIndex = 45;
             this.button3.Text = "BUSCAR MOSTRAR EN DATAGRID";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 
@@ -248,7 +244,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(148, 21);
             this.textBox2.TabIndex = 36;
-            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // label6
             // 
@@ -327,7 +322,6 @@
             this.button6.TabIndex = 54;
             this.button6.Text = "MODIFICAR DATOS DE TEXBOX";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Form4
             // 
