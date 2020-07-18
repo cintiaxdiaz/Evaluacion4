@@ -14,8 +14,8 @@ namespace ProyRestMatrizArray
 {
 	public partial class Form1 : Form
 	{
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-        //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
         //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pablosotosaavedra\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 
         public Form1()
@@ -39,8 +39,10 @@ namespace ProyRestMatrizArray
                 MessageBox.Show("Clave o usuario inválido");
                 return;
 			}
-				
-		    USUARIO usua = new USUARIO(textBoxRut.Text);
+            
+            string rut_tabla = tabla_transito.Rows[0]["rut"].ToString();
+            int nivel_tabla = Int32.Parse(tabla_transito.Rows[0]["Nivel"].ToString());
+            USUARIO usua = new USUARIO(rut_tabla, nivel_tabla);
 		    Form formulario = new Form2(usua);
 		    formulario.Show();
 		    Visible = false;
@@ -100,7 +102,11 @@ namespace ProyRestMatrizArray
 			return digito == digitoVer;
 
 		}
-	}
+
+        private void Form1_Load(object sender, EventArgs e) {
+
+        }
+    }
 }
 		
     

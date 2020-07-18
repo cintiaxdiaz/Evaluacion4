@@ -70,6 +70,7 @@
             this.pERFILESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aCCIONESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cERRARToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -522,6 +523,7 @@
             this.mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
             this.mENÚToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.mENÚToolStripMenuItem.Text = "MENÚ";
+            this.mENÚToolStripMenuItem.Click += new System.EventHandler(this.MENÚToolStripMenuItem_Click);
             // 
             // pERFILESToolStripMenuItem
             // 
@@ -543,6 +545,11 @@
             this.cERRARToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cERRARToolStripMenuItem.Text = "ARCHIVO VIGÍA";
             this.cERRARToolStripMenuItem.Click += new System.EventHandler(this.CERRARToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // Form2
             // 
@@ -612,5 +619,6 @@
         private System.Windows.Forms.ToolStripMenuItem pERFILESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aCCIONESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cERRARToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

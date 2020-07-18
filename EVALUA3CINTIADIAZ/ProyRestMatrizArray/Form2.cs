@@ -168,6 +168,12 @@ namespace ProyRestMatrizArray
             }
         }
         private void Form2_Load(object sender, EventArgs e) {
+            if (!usuario.is_admin()) {
+
+                pERFILESToolStripMenuItem.Enabled = false;
+
+            }
+
         }
         private void GroupBox1_Enter(object sender, EventArgs e) {
         }
@@ -197,6 +203,10 @@ namespace ProyRestMatrizArray
         private void CERRARToolStripMenuItem_Click(object sender, EventArgs e) {
             Form formulario = new Form5();
             formulario.Show();
+        }
+
+        private void MENÚToolStripMenuItem_Click(object sender, EventArgs e) {
+
         }
     }
 }
