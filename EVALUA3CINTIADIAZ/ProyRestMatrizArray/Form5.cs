@@ -127,5 +127,9 @@ namespace ProyRestMatrizArray
         private void Form5_Load(object sender, EventArgs e) {
 
         }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }
