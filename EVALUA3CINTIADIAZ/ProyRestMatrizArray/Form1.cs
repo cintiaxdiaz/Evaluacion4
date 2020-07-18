@@ -22,7 +22,7 @@ namespace ProyRestMatrizArray
 		{
 			InitializeComponent();
             this.MaximizeBox = false;
-            this.ClientSize = new Size(747, 423);
+            this.ClientSize = new Size(730, 306);
         }
 		private void buttonIngresar_Click(object sender, EventArgs e)
 		{

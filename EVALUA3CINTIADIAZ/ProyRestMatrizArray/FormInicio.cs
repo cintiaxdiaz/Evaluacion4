@@ -15,7 +15,7 @@ namespace ProyRestMatrizArray
         public FormInicio() {
             InitializeComponent();
             this.MaximizeBox = false;
-            this.ClientSize = new Size(932, 423);
+            this.ClientSize = new Size(730, 306);
         }
 		
         private void btnIrAIngreso_Click(object sender, EventArgs e) {
