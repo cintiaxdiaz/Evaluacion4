@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
@@ -57,7 +51,7 @@ namespace ProyRestMatrizArray
 			//muestra al cargar el formulario
 			objeto_conect.Open();
 			DataTable tabla_PERFILES = new DataTable();
-			SqlDataAdapter sentencia = new SqlDataAdapter("select * from ACCIONESCINTIADIAZ ", objeto_conect);
+			SqlDataAdapter sentencia = new SqlDataAdapter("select Num,P.clave,InicioSesion,FinSesion,Accion,AccionF,Nivel from ACCIONESCINTIADIAZ A inner join PERFILESCINTIADIAZ P on P.rut = A.clave ", objeto_conect);
 			tabla_PERFILES.Clear();
 			sentencia.Fill(tabla_PERFILES);
 			dataGridView1.DataSource = tabla_PERFILES;

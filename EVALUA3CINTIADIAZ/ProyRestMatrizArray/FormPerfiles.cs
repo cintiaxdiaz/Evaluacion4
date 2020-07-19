@@ -216,7 +216,17 @@ namespace ProyRestMatrizArray
             }
         }
 
-        
-    }
+		private void button3_Click(object sender, EventArgs e)
+		{
+			//Búsqueda por apellido paterno con un textbox
+			objeto_conect.Open();
+			DataTable tabla_PERFILES = new DataTable();
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave like '%" + textBox1.Text + "%'", objeto_conect);
+			tabla_PERFILES.Clear();
+			sentencia.Fill(tabla_PERFILES);
+			dataGridView1.DataSource = tabla_PERFILES;
+			objeto_conect.Close();
+		}
+	}
 }
     
