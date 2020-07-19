@@ -3,7 +3,6 @@ using System.Data;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
-using System.Text.RegularExpressions;
 
 namespace ProyRestMatrizArray
 {
@@ -14,8 +13,8 @@ namespace ProyRestMatrizArray
         public FormAcciones() {
             InitializeComponent();
         }
-		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 
         public FormAcciones(USUARIO usuaform6) {
             InitializeComponent();
@@ -24,7 +23,6 @@ namespace ProyRestMatrizArray
 
         private void Button4_Click(object sender, EventArgs e) {
             Visible = false;
-
         }
 
         private void Button8_Click(object sender, EventArgs e) {
@@ -69,14 +67,6 @@ namespace ProyRestMatrizArray
 			objeto_conect.Close();
 		}
 
-        private void DateTimePicker2_ValueChanged(object sender, EventArgs e) {
-
-        }
-
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-
-        }
-
         private void Button2_Click(object sender, EventArgs e) {
             string fecha_desde = dateTimePicker1.Value.ToString("yyyy-MM-dd") + "T00:00:00";
             string query = "select * from ACCIONESCINTIADIAZ where AccionF >= '" + fecha_desde + "'";
@@ -97,11 +87,6 @@ namespace ProyRestMatrizArray
             sentencia.Fill(tabla_PERFILES);
             dataGridView1.DataSource = tabla_PERFILES;
             objeto_conect.Close();
-        }
-
-        private void RadioButton1_CheckedChanged(object sender, EventArgs e) {
-
-
         }
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e) {

@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
-using System.Text.RegularExpressions;
 
 namespace ProyRestMatrizArray
 {
@@ -18,8 +11,8 @@ namespace ProyRestMatrizArray
         public FormVigia() {
             InitializeComponent();
         }
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
-		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
 
 		private void Button3_Click(object sender, EventArgs e) {
             if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
@@ -37,7 +30,6 @@ namespace ProyRestMatrizArray
             }
             leer.Close();
     }
-
         private void Button2_Click(object sender, EventArgs e) {
             if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
                 MessageBox.Show("No existe");
@@ -78,7 +70,6 @@ namespace ProyRestMatrizArray
             leer.Close();
             MessageBox.Show("Búsqueda de traspaso exitosa");
             objeto_conect.Close();
-
         }
 
         private void Button8_Click(object sender, EventArgs e) {
@@ -100,11 +91,10 @@ namespace ProyRestMatrizArray
                 sentencia.Fill(tabla_acciones);
                 mostrar = leer.ReadLine();
                 objeto_conect.Close();
-
             }
+
             leer.Close();
             MessageBox.Show("Traspaso exitoso");
-
         }
 
         private void Button4_Click(object sender, EventArgs e) {

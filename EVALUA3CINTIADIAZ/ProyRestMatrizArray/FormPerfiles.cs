@@ -1,15 +1,7 @@
 ﻿using System.Configuration;
-using System.Collections.Specialized;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 using System.Data.SqlClient;
 using System.Text.RegularExpressions;
 
@@ -23,8 +15,8 @@ namespace ProyRestMatrizArray
         //conexión a bdd
 
         //CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
-        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\basesLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-        //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+       // SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\basesLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
         //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
         //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pablosotosaavedra\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 
@@ -150,7 +142,6 @@ namespace ProyRestMatrizArray
                 dataGridView1.DataSource = tabla_PERFILES;
                 objeto_conect.Close();
 			}
-			
 		}
 
 		private void button2_Click_2(object sender, EventArgs e)
@@ -202,7 +193,6 @@ namespace ProyRestMatrizArray
                 }
                 else
                 {
-                    
                     for (int i = 0; i < total; i++)
                     {
                         textBox2.Text = tabla_transito.Rows[i]["rut"].ToString();
@@ -210,7 +200,6 @@ namespace ProyRestMatrizArray
                         textBox4.Text = tabla_transito.Rows[i]["ApPat"].ToString();
                         textBox5.Text = tabla_transito.Rows[i]["ApMat"].ToString();
                         comboBox1.Text = tabla_transito.Rows[i]["Nivel"].ToString();
-
                     }
                     MessageBox.Show("Datos encontrados y mostrados en Texbox!!!");
                     objeto_conect.Close();

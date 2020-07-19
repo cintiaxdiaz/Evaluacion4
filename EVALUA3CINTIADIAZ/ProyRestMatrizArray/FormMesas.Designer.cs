@@ -522,7 +522,6 @@
             this.mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
             this.mENÚToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.mENÚToolStripMenuItem.Text = "MENÚ";
-            this.mENÚToolStripMenuItem.Click += new System.EventHandler(this.MENÚToolStripMenuItem_Click);
             // 
             // pERFILESToolStripMenuItem
             // 

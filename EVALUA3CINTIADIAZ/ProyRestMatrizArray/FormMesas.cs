@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -179,11 +174,6 @@ namespace ProyRestMatrizArray
 			}
 
         }
-        
-        private void Button4_Click(object sender, EventArgs e) {
-           // Form formulario = new Form4();
-            //formulario.Show();
-        }
 
         private void PERFILESToolStripMenuItem_Click(object sender, EventArgs e) {
             Form formulario = new FormPerfiles();
@@ -198,14 +188,6 @@ namespace ProyRestMatrizArray
         private void CERRARToolStripMenuItem_Click(object sender, EventArgs e) {
             Form formulario = new FormVigia();
             formulario.Show();
-        }
-
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e) {
-
-        }
-
-        private void MENÚToolStripMenuItem_Click(object sender, EventArgs e) {
-
         }
     }
 }
