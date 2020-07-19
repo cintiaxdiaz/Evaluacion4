@@ -18,8 +18,8 @@ namespace ProyRestMatrizArray
         public FormVigia() {
             InitializeComponent();
         }
-		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
 
 		private void Button3_Click(object sender, EventArgs e) {
             if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
@@ -30,7 +30,7 @@ namespace ProyRestMatrizArray
             string buscar = leer.ReadLine();
             while (buscar != null) {
                 string[] busca = buscar.Split(',');
-                if (busca[0].Equals(textBox1.Text)) {
+                if (busca[0].Contains(textBox1.Text)) {
                     label1.Text = label1.Text + buscar + "\n";
                 }
                 buscar = leer.ReadLine();
@@ -62,22 +62,21 @@ namespace ProyRestMatrizArray
             StreamReader leer = new StreamReader(@"C:\TXTS\VIGIACINTIADIAZ.txt");
             label1.Text = "";
             string mostrar = leer.ReadLine();
+            objeto_conect.Open();
             while (mostrar != null) {
                 string[] palabras = mostrar.Split(',');
                 mostrar = leer.ReadLine();
-                if (palabras[0] != textBox8.Text) {
+                if (palabras[0].Contains(textBox8.Text)) {
                     continue;
                 }
-                objeto_conect.Open();
                 DataTable tabla_acciones = new DataTable();
                 string sqlinsertar = "insert into ACCIONESCINTIADIAZ (clave, InicioSesion, FinSesion, Accion, AccionF) values  ('" + palabras[0] + "','" + palabras[1] + "','" + palabras[2] + "','" + palabras[3].Substring(0, Math.Min(50, palabras[3].Length)) + "','" + palabras[4] + "')";
                 SqlDataAdapter sentencia = new SqlDataAdapter(sqlinsertar, objeto_conect);
                 tabla_acciones.Clear();
                 sentencia.Fill(tabla_acciones);
-                leer.Close();
             }
-            
-            MessageBox.Show("busqueda de traspaso exitosa");
+            leer.Close();
+            MessageBox.Show("Búsqueda de traspaso exitosa");
             objeto_conect.Close();
 
         }

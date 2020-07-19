@@ -16,7 +16,7 @@ namespace ProyRestMatrizArray
         private DateTime AccionF;
 
         public CLASEEVALUA2CintiaDiaz(USUARIO user, string Acciones) {
-            rut = user.rut;
+            rut = user.clave;
             inicioSesion = user.inicioSesion;
             Accion = Acciones;
             AccionF = DateTime.Now;

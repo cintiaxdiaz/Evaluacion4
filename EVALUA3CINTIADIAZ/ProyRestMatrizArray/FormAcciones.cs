@@ -9,14 +9,20 @@ namespace ProyRestMatrizArray
 {
     public partial class FormAcciones : Form
     {
+        USUARIO usuario;
+
         public FormAcciones() {
             InitializeComponent();
         }
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 
+        public FormAcciones(USUARIO usuaform6) {
+            InitializeComponent();
+            usuario = usuaform6;
+        }
 
-		private void Button4_Click(object sender, EventArgs e) {
+        private void Button4_Click(object sender, EventArgs e) {
             Visible = false;
 
         }
@@ -48,14 +54,59 @@ namespace ProyRestMatrizArray
 
 		private void FormAcciones_Load(object sender, EventArgs e)
 		{
-			//muestra al cargar el formulario
-			objeto_conect.Open();
+            string query = "select * from ACCIONESCINTIADIAZ";
+            if (!usuario.is_admin()) {
+                query += " where clave = '" + usuario.clave + "'";
+            }
+
+            //muestra al cargar el formulario
+            objeto_conect.Open();
 			DataTable tabla_PERFILES = new DataTable();
-			SqlDataAdapter sentencia = new SqlDataAdapter("select Num,P.clave,InicioSesion,FinSesion,Accion,AccionF,Nivel from ACCIONESCINTIADIAZ A inner join PERFILESCINTIADIAZ P on P.rut = A.clave ", objeto_conect);
+			SqlDataAdapter sentencia = new SqlDataAdapter(query, objeto_conect);
 			tabla_PERFILES.Clear();
 			sentencia.Fill(tabla_PERFILES);
 			dataGridView1.DataSource = tabla_PERFILES;
 			objeto_conect.Close();
 		}
-	}
+
+        private void DateTimePicker2_ValueChanged(object sender, EventArgs e) {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e) {
+            string fecha_desde = dateTimePicker1.Value.ToString("yyyy-MM-dd") + "T00:00:00";
+            string query = "select * from ACCIONESCINTIADIAZ where AccionF >= '" + fecha_desde + "'";
+            if (checkBox1.Checked) {
+                string fecha_hasta = dateTimePicker2.Value.ToString("yyyy-MM-dd") + "T23:59:59";
+                query += " and AccionF <= '" + fecha_hasta +"'";
+            }
+            if (!usuario.is_admin()) {
+                query += " and clave = '" + usuario.clave + "'";
+            }
+
+            // MOSTRAR
+            objeto_conect.Open();
+            DataTable tabla_PERFILES = new DataTable();
+            SqlDataAdapter sentencia = new SqlDataAdapter(query, objeto_conect);
+            
+            tabla_PERFILES.Clear();
+            sentencia.Fill(tabla_PERFILES);
+            dataGridView1.DataSource = tabla_PERFILES;
+            objeto_conect.Close();
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e) {
+
+
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e) {
+            dateTimePicker2.Enabled = !dateTimePicker2.Enabled;
+
+        }
+    }
 }

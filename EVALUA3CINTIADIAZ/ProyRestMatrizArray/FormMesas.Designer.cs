@@ -522,6 +522,7 @@
             this.mENÚToolStripMenuItem.Name = "mENÚToolStripMenuItem";
             this.mENÚToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.mENÚToolStripMenuItem.Text = "MENÚ";
+            this.mENÚToolStripMenuItem.Click += new System.EventHandler(this.MENÚToolStripMenuItem_Click);
             // 
             // pERFILESToolStripMenuItem
             // 
@@ -549,7 +550,7 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // Form2
+            // FormMesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -562,7 +563,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form2";
+            this.Name = "FormMesas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mesas";
             this.Load += new System.EventHandler(this.Form2_Load);

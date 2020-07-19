@@ -8,6 +8,7 @@ namespace ProyRestMatrizArray
 {
     public class USUARIO {
         public string rut;
+        public string clave;
         public int nivel;
         public DateTime inicioSesion;
         public DateTime finSesion;
@@ -16,6 +17,14 @@ namespace ProyRestMatrizArray
             rut = Rut;
             nivel = Nivel;
             inicioSesion = DateTime.Now;
+        }
+
+            public USUARIO(string Rut, int Nivel, string Clave) {
+            rut = Rut;
+            clave = Clave;
+            nivel = Nivel;
+            inicioSesion = DateTime.Now;
+
 
         }
         public USUARIO(string Rut) {
