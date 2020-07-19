@@ -48,7 +48,7 @@ namespace ProyRestMatrizArray
             if (rutValido(textBox2.Text)) {
                 objeto_conect.Open();
                 DataTable tabla_perfiles = new DataTable();
-                string clav = textBox3.Text.Substring(0, 1) + textBox4.Text.Substring(0, 1) + textBox5.Text.Substring(0, 1) + textBox2.Text;
+                string clav = textBox3.Text.Substring(0, 1) + textBox4.Text.Substring(0, 1) + textBox5.Text.Substring(0, 1) + textBox2.Text.Substring(0, 10);
                 string sqlinsertar = "insert into PERFILESCINTIADIAZ (rut,nombre,ApPat,ApMat,clave,Nivel) values  ('" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + clav + "'," + comboBox1.SelectedItem + ")";
                 SqlDataAdapter sentencia = new SqlDataAdapter(sqlinsertar, objeto_conect);
                 tabla_perfiles.Clear();
