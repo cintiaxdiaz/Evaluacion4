@@ -62,7 +62,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(1013, 15);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 34);
             this.button1.TabIndex = 27;
@@ -76,7 +76,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.LightPink;
             this.dataGridView1.Location = new System.Drawing.Point(16, 516);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(873, 283);
             this.dataGridView1.TabIndex = 28;
@@ -86,7 +86,7 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(203, 238);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(197, 41);
             this.button4.TabIndex = 30;
@@ -112,9 +112,9 @@
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(41, 27);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(868, 416);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
@@ -127,9 +127,9 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(32, 321);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(409, 73);
             this.groupBox2.TabIndex = 53;
             this.groupBox2.TabStop = false;
@@ -138,7 +138,7 @@
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(39, 25);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(152, 34);
@@ -149,7 +149,7 @@
             this.button2.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(216, 26);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 33);
             this.button2.TabIndex = 45;
@@ -167,9 +167,9 @@
             this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(483, 25);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(364, 369);
             this.groupBox3.TabIndex = 44;
             this.groupBox3.TabStop = false;
@@ -180,7 +180,7 @@
             this.button6.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.Location = new System.Drawing.Point(180, 171);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(164, 82);
             this.button6.TabIndex = 54;
@@ -193,7 +193,7 @@
             this.button5.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(11, 171);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(161, 82);
             this.button5.TabIndex = 53;
@@ -206,7 +206,7 @@
             this.button3.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(11, 84);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(161, 80);
             this.button3.TabIndex = 45;
@@ -217,7 +217,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(39, 34);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(285, 34);
@@ -228,7 +228,7 @@
             this.button10.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.Location = new System.Drawing.Point(180, 84);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(164, 80);
             this.button10.TabIndex = 47;
@@ -243,7 +243,7 @@
             "1",
             "2"});
             this.comboBox1.Location = new System.Drawing.Point(203, 202);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(129, 26);
             this.comboBox1.TabIndex = 43;
@@ -263,7 +263,7 @@
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(203, 162);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(196, 24);
             this.textBox5.TabIndex = 39;
@@ -271,7 +271,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(203, 123);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(196, 24);
             this.textBox4.TabIndex = 38;
@@ -279,7 +279,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(203, 85);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(196, 24);
             this.textBox3.TabIndex = 37;
@@ -287,7 +287,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(203, 48);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(196, 24);
             this.textBox2.TabIndex = 36;
@@ -362,7 +362,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormPerfiles";
             this.Text = "Perfiles";
             this.Load += new System.EventHandler(this.Form4_Load);

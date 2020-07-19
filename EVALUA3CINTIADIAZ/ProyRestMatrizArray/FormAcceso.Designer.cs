@@ -45,10 +45,11 @@
             // 
             this.textBoxClave.BackColor = System.Drawing.SystemColors.Window;
             this.textBoxClave.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxClave.Location = new System.Drawing.Point(277, 202);
+            this.textBoxClave.Location = new System.Drawing.Point(369, 249);
+            this.textBoxClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxClave.Multiline = true;
             this.textBoxClave.Name = "textBoxClave";
-            this.textBoxClave.Size = new System.Drawing.Size(174, 33);
+            this.textBoxClave.Size = new System.Drawing.Size(231, 40);
             this.textBoxClave.TabIndex = 0;
             this.textBoxClave.Text = "CLAVE";
             this.textBoxClave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -56,22 +57,23 @@
             // textBoxRut
             // 
             this.textBoxRut.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRut.Location = new System.Drawing.Point(278, 128);
+            this.textBoxRut.Location = new System.Drawing.Point(371, 158);
+            this.textBoxRut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxRut.Multiline = true;
             this.textBoxRut.Name = "textBoxRut";
-            this.textBoxRut.Size = new System.Drawing.Size(173, 33);
+            this.textBoxRut.Size = new System.Drawing.Size(229, 40);
             this.textBoxRut.TabIndex = 1;
             this.textBoxRut.Text = "RUT";
             this.textBoxRut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxRut.TextChanged += new System.EventHandler(this.TextBoxRut_TextChanged);
             // 
             // buttonIngresar
             // 
             this.buttonIngresar.BackgroundImage = global::ProyRestMatrizArray.Properties.Resources.triangle_abstract_gradient_soft_gradient_wallpaper_preview;
             this.buttonIngresar.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIngresar.Location = new System.Drawing.Point(304, 248);
+            this.buttonIngresar.Location = new System.Drawing.Point(405, 305);
+            this.buttonIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonIngresar.Name = "buttonIngresar";
-            this.buttonIngresar.Size = new System.Drawing.Size(117, 32);
+            this.buttonIngresar.Size = new System.Drawing.Size(156, 39);
             this.buttonIngresar.TabIndex = 2;
             this.buttonIngresar.Text = "INGRESAR";
             this.buttonIngresar.UseVisualStyleBackColor = true;
@@ -83,9 +85,10 @@
             this.hora.BackColor = System.Drawing.Color.Transparent;
             this.hora.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hora.ForeColor = System.Drawing.Color.White;
-            this.hora.Location = new System.Drawing.Point(602, 9);
+            this.hora.Location = new System.Drawing.Point(803, 11);
+            this.hora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.hora.Name = "hora";
-            this.hora.Size = new System.Drawing.Size(60, 29);
+            this.hora.Size = new System.Drawing.Size(76, 37);
             this.hora.TabIndex = 3;
             this.hora.Text = "Hora";
             // 
@@ -95,9 +98,10 @@
             this.fecha.BackColor = System.Drawing.Color.Transparent;
             this.fecha.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.ForeColor = System.Drawing.Color.White;
-            this.fecha.Location = new System.Drawing.Point(9, 9);
+            this.fecha.Location = new System.Drawing.Point(12, 11);
+            this.fecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(69, 29);
+            this.fecha.Size = new System.Drawing.Size(87, 37);
             this.fecha.TabIndex = 4;
             this.fecha.Text = "Fecha";
             // 
@@ -112,9 +116,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 42F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label3.Location = new System.Drawing.Point(191, 47);
+            this.label3.Location = new System.Drawing.Point(255, 58);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(367, 65);
+            this.label3.Size = new System.Drawing.Size(458, 83);
             this.label3.TabIndex = 8;
             this.label3.Text = "BIENVENIDOS";
             // 
@@ -124,19 +129,20 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(323, 168);
+            this.label2.Location = new System.Drawing.Point(431, 207);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 19);
+            this.label2.Size = new System.Drawing.Size(106, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "12345678-9";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(36)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(710, 335);
+            this.ClientSize = new System.Drawing.Size(947, 412);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.fecha);
@@ -144,10 +150,11 @@
             this.Controls.Add(this.buttonIngresar);
             this.Controls.Add(this.textBoxRut);
             this.Controls.Add(this.textBoxClave);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acceso";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
