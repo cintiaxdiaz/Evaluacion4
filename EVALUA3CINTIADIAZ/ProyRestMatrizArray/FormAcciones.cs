@@ -18,10 +18,11 @@ namespace ProyRestMatrizArray
         public FormAcciones() {
             InitializeComponent();
         }
-        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 
 
-        private void Button4_Click(object sender, EventArgs e) {
+		private void Button4_Click(object sender, EventArgs e) {
             Visible = false;
 
         }
@@ -50,6 +51,17 @@ namespace ProyRestMatrizArray
             MessageBox.Show("Traspaso exitoso");
 
         }
-		
-    }
+
+		private void FormAcciones_Load(object sender, EventArgs e)
+		{
+			//muestra al cargar el formulario
+			objeto_conect.Open();
+			DataTable tabla_PERFILES = new DataTable();
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from ACCIONESCINTIADIAZ ", objeto_conect);
+			tabla_PERFILES.Clear();
+			sentencia.Fill(tabla_PERFILES);
+			dataGridView1.DataSource = tabla_PERFILES;
+			objeto_conect.Close();
+		}
+	}
 }
