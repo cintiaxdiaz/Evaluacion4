@@ -61,8 +61,8 @@ namespace ProyRestMatrizArray
 
                 foreach (CLASEEVALUA2CintiaDiaz Evento in LISTAEVALUA2) {
                     Evento.fin = usuario.finSesion;
-                    archivolista.WriteLine(Evento.Rut + "," + Evento.Iniciosesion + "," + Evento.fin +
-                                            "," + Evento.accion + "," + Evento.accionf);
+                    archivolista.WriteLine(Evento.Rut + "," + Evento.Iniciosesion.ToString("s") + "," + Evento.fin.ToString("s") +
+                                            "," + Evento.accion + "," + Evento.accionf.ToString("s"));
                 }
                 archivolista.Close();
                 Form1 formulario1 = new Form1();
@@ -171,11 +171,11 @@ namespace ProyRestMatrizArray
             if (!usuario.is_admin()) {
 
                 pERFILESToolStripMenuItem.Enabled = false;
-				MessageBox.Show("No posee los privilegios necesarios, para ingresar a Perfiles");
+				MessageBox.Show("Perfil: USUARIO");
 			}
 			else
 			{
-				MessageBox.Show("Eres Administrador");
+				MessageBox.Show("Perfil: ADMINISTRADOR");
 			}
 
         }
@@ -191,7 +191,7 @@ namespace ProyRestMatrizArray
         }
 
         private void ACCIONESToolStripMenuItem_Click(object sender, EventArgs e) {
-            Form formulario = new FormAcciones();
+            Form formulario = new FormAcciones(usuario);
             formulario.Show();
         }
 
@@ -199,7 +199,14 @@ namespace ProyRestMatrizArray
             Form formulario = new FormVigia();
             formulario.Show();
         }
-		
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e) {
+
+        }
+
+        private void MENÚToolStripMenuItem_Click(object sender, EventArgs e) {
+
+        }
     }
 }
 

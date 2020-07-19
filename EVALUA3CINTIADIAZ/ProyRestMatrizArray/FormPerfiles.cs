@@ -23,11 +23,10 @@ namespace ProyRestMatrizArray
         //conexión a bdd
 
         //CONECTANDO A BD USANDO LA CONFIGURACION EN EL ARCHIVO App.config
-        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\basesLeones\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-        //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-        // SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+       //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
+       SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
         //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pablosotosaavedra\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
-
+        
         private void Button1_Click(object sender, EventArgs e) {
             Visible = false;
         }
@@ -58,7 +57,7 @@ namespace ProyRestMatrizArray
                 textBox3.Text = "";
                 textBox4.Text = "";
                 textBox5.Text = "";
-                comboBox1.Text = null;
+                comboBox1.Text = "";
                 DataTable tabla_PERFILES = new DataTable();
                 sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
                 tabla_PERFILES.Clear();
@@ -149,13 +148,7 @@ namespace ProyRestMatrizArray
                 sentencia.Fill(tabla_PERFILES);
                 dataGridView1.DataSource = tabla_PERFILES;
                 objeto_conect.Close();
-                textBox1.Text = "";
-                textBox2.Text = "";
-                textBox3.Text = "";
-                textBox4.Text = "";
-                textBox5.Text = "";
-                comboBox1.Text = null;
-            }
+			}
 			
 		}
 
@@ -169,8 +162,7 @@ namespace ProyRestMatrizArray
 			sentencia.Fill(tabla_PERFILES);
 			dataGridView1.DataSource = tabla_PERFILES;
 			objeto_conect.Close();
-            textBox6.Text = "";
-        }
+		}
 		
         private void Form4_Load(object sender, EventArgs e) {
 			//muestra al cargar el formulario
@@ -181,8 +173,7 @@ namespace ProyRestMatrizArray
             sentencia.Fill(tabla_PERFILES);
             dataGridView1.DataSource = tabla_PERFILES;
             objeto_conect.Close();
-            //codigos para que el combo box solo utilice valores cargados de la lista 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+
         }
 
         private void button5_Click_1(object sender, EventArgs e)
@@ -236,25 +227,6 @@ namespace ProyRestMatrizArray
 			dataGridView1.DataSource = tabla_PERFILES;
 			objeto_conect.Close();
 		}
-
-        private void button6_Click(object sender, EventArgs e) 
-        {
-            //Actualizacion de datos a partir de los textbox
-            objeto_conect.Open();
-            DataTable tabla_PERFILES = new DataTable();
-            string clav = textBox3.Text.Substring(0, 1) + textBox4.Text.Substring(0, 1) + textBox5.Text.Substring(0, 1) + textBox2.Text;
-            SqlDataAdapter sentencia = new SqlDataAdapter("update PERFILESCINTIADIAZ set nombre ='" + textBox3.Text + "', ApPat ='" + textBox4.Text + "', ApMat ='" + textBox5.Text + "', clave ='" + clav + "', Nivel ='" + comboBox1.Text + "' where rut ='" + textBox2.Text + "'; SELECT * FROM PERFILESCINTIADIAZ;", objeto_conect);
-            tabla_PERFILES.Clear();
-            sentencia.Fill(tabla_PERFILES);
-            dataGridView1.DataSource = tabla_PERFILES;
-            objeto_conect.Close();
-            MessageBox.Show("Datos modificados exitosamente");
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
-            comboBox1.Text=null;
-        }
-    }
+	}
 }
     
