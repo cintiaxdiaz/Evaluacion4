@@ -33,9 +33,9 @@ namespace ProyRestMatrizArray
         private void btnMesa1_Click(object sender, EventArgs e) {
 
             //Se asignan la mesa al formulario tres
-            AgregarEvento("[0;0]");
+            AgregarEvento("1");
             Mesa mesita = mesas[0, 0];
-            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[0;0]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[1]");
             formulario.Show();
         }
         private void Horayfecha_Tick(object sender, EventArgs e) {
@@ -43,11 +43,12 @@ namespace ProyRestMatrizArray
             fecha.Text = DateTime.Now.ToLongDateString();
         }
         private void BtnMesa2_Click(object sender, EventArgs e) {
-            AgregarEvento("[0;1]");
+            AgregarEvento("[2]");
             Mesa mesita = mesas[0, 1];
-            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[0;1]");
+            Form formulario = new FormPedidos(mesita, this, usuario, LISTAEVALUA2, "[2]");
             formulario.Show();
-        }
+
+        }//cierra sesion y envia los datos a txt cn c:
         private void Button1_Click(object sender, EventArgs e) {
             if (MessageBox.Show("Desea salir de las mesas?", "Salir", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question) == DialogResult.Yes) {
@@ -161,7 +162,7 @@ namespace ProyRestMatrizArray
                     }
                 }
             }
-        }
+        }//codigo que bloquea o permite acceso dependiendo del nivel
         private void Form2_Load(object sender, EventArgs e) {
             if (!usuario.is_admin()) {
 

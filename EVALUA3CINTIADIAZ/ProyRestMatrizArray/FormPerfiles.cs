@@ -23,7 +23,7 @@ namespace ProyRestMatrizArray
         private void Button1_Click(object sender, EventArgs e) {
             Visible = false;
         }
-       
+       //valida si esta registrado en la bbdd
         private void Button4_Click(object sender, EventArgs e) {
             objeto_conect.Open();
             DataTable tabla_transito = new DataTable();
@@ -37,7 +37,7 @@ namespace ProyRestMatrizArray
                 MessageBox.Show("Usuario ya registrado");
                 return;
             }
-
+			//agrega el nuevo usuario en la bbdd
             if (rutValido(textBox2.Text)) {
                 objeto_conect.Open();
                 DataTable tabla_perfiles = new DataTable();
@@ -51,6 +51,7 @@ namespace ProyRestMatrizArray
                 textBox4.Text = "";
                 textBox5.Text = "";
                 comboBox1.Text = null;
+				//muestra la actualizacion en el datagrid
                 DataTable tabla_PERFILES = new DataTable();
                 sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ", objeto_conect);
                 tabla_PERFILES.Clear();
@@ -62,7 +63,7 @@ namespace ProyRestMatrizArray
                 MessageBox.Show("RUT inválido");
             }
         }
-
+		//valida el digito verificador del rut
         private bool rutValido(string rut) {
 
             Regex rgx = new Regex(@"^\d{1,8}-(?:\d|k|K)$");
@@ -103,7 +104,7 @@ namespace ProyRestMatrizArray
 
 
 		private void Button10_Click(object sender, EventArgs e)
-		{
+		{//muestra en los textbox y elimina segun la clave de la bbdd
 			objeto_conect.Open();
 			DataTable tabla_transito = new DataTable();
 			string clave = textBox1.Text;
@@ -170,15 +171,12 @@ namespace ProyRestMatrizArray
         }
 
         private void button5_Click_1(object sender, EventArgs e)
-        {
-
-            //SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where= clave '%" + textBox1.Text + "%'", objeto_conect);
-            {
+		{//muestra datos en los textbox por clave ingresada 
+			{
                 objeto_conect.Open();
                 DataTable tabla_transito = new DataTable();
 
                 string rut = textBox1.Text;
-                //llama datos de la tabla "perfiles" el campo "rut" del rut del trabajador
                 SqlDataAdapter sentencia = new SqlDataAdapter
                 ("select * from PERFILESCINTIADIAZ where clave='" + rut + "'", objeto_conect);
 
@@ -209,10 +207,10 @@ namespace ProyRestMatrizArray
 
 		private void button3_Click(object sender, EventArgs e)
 		{
-			//Búsqueda por apellido paterno con un textbox
+			//Búsqueda por apellido paterno con un textbox clave
 			objeto_conect.Open();
 			DataTable tabla_PERFILES = new DataTable();
-			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave like '%" + textBox1.Text + "%'", objeto_conect);
+			SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESCINTIADIAZ where clave like '" + textBox1.Text + "'", objeto_conect);
 			tabla_PERFILES.Clear();
 			sentencia.Fill(tabla_PERFILES);
 			dataGridView1.DataSource = tabla_PERFILES;
@@ -220,7 +218,7 @@ namespace ProyRestMatrizArray
 		}
 
         private void button6_Click(object sender, EventArgs e) {
-            //Actualizacion de datos a partir de los textbox
+            //Actualizacion (modifica valores) de datos a partir de los textbox
             objeto_conect.Open();
             DataTable tabla_PERFILES = new DataTable();
             string clav = textBox3.Text.Substring(0, 1) + textBox4.Text.Substring(0, 1) + textBox5.Text.Substring(0, 1) + textBox2.Text;

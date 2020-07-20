@@ -38,14 +38,17 @@
 			this.button8 = new System.Windows.Forms.Button();
 			this.button4 = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.groupBox2.SuspendLayout();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox2
 			// 
 			this.groupBox2.BackColor = System.Drawing.Color.MistyRose;
 			this.groupBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox2.BackgroundImage")));
+			this.groupBox2.Controls.Add(this.dataGridView1);
 			this.groupBox2.Controls.Add(this.label5);
 			this.groupBox2.Controls.Add(this.button2);
 			this.groupBox2.Controls.Add(this.textBox1);
@@ -190,6 +193,14 @@
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "TRASPASO A TABLA ACCIONES";
 			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(6, 173);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.Size = new System.Drawing.Size(528, 150);
+			this.dataGridView1.TabIndex = 32;
+			// 
 			// FormVigia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +216,7 @@
 			this.groupBox2.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.ResumeLayout(false);
 
         }
@@ -223,5 +235,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox1;
-    }
+		private System.Windows.Forms.DataGridView dataGridView1;
+	}
 }

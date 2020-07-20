@@ -13,7 +13,7 @@ namespace ProyRestMatrizArray
         }
 		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-
+		//
 		private void Button3_Click(object sender, EventArgs e) {
             if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
                 MessageBox.Show("No existe");
@@ -29,7 +29,7 @@ namespace ProyRestMatrizArray
                 buscar = leer.ReadLine();
             }
             leer.Close();
-    }
+    }//muestra todo lo del txt vigia en el data grid
         private void Button2_Click(object sender, EventArgs e) {
             if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
                 MessageBox.Show("No existe");

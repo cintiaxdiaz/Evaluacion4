@@ -15,13 +15,13 @@ namespace ProyRestMatrizArray
         //SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\pablosotosaavedra\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
 
         public Form1()
-		{
+		{// mantiene tamaño del form acceso
 			InitializeComponent();
             this.MaximizeBox = false;
             this.ClientSize = new Size(730, 306);
         }
 		private void buttonIngresar_Click(object sender, EventArgs e)
-		{
+		{//valida que el ingreso realizado por rut y clave se encuentren en la bbdd
 			objeto_conect.Open();
 			DataTable tabla_transito = new DataTable();
 			string clave = textBoxClave.Text;
@@ -35,7 +35,7 @@ namespace ProyRestMatrizArray
                 MessageBox.Show("Clave o usuario inválido");
                 return;
 			}
-            
+            //valida al ingreso si es usuario o administrador
             string rut_tabla = tabla_transito.Rows[0]["rut"].ToString();
             int nivel_tabla = Int32.Parse(tabla_transito.Rows[0]["Nivel"].ToString());
             USUARIO usua = new USUARIO(rut_tabla, nivel_tabla, clave);
@@ -53,7 +53,7 @@ namespace ProyRestMatrizArray
 			fecha.Text = DateTime.Now.ToLongDateString();
 		}
 		private bool rutValido(string rut)
-		{
+		{//valida el digito verificador sea correcto 
 
 			Regex rgx = new Regex(@"^\d{1,8}-(?:\d|k|K)$");
 			if (!rgx.IsMatch(rut))
@@ -98,8 +98,10 @@ namespace ProyRestMatrizArray
 			return digito == digitoVer;
   		}
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
-            Application.Exit();//cerra programa apesar de que el fromulario inicio siguie activo
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		//cierra programa apesar de que el fromulario inicio sigue activo
+		{
+			Application.Exit();
         }
     }
 }

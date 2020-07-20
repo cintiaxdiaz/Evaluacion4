@@ -24,8 +24,6 @@ namespace ProyRestMatrizArray
             clave = Clave;
             nivel = Nivel;
             inicioSesion = DateTime.Now;
-
-
         }
         public USUARIO(string Rut) {
             rut = Rut;
@@ -34,9 +32,8 @@ namespace ProyRestMatrizArray
         public void CERRARSESION(){
 
             finSesion = DateTime.Now;
-
-
             }
+		//determina si es admin o usuario
         public bool is_admin() {
 
             return nivel == 1;
