@@ -11,9 +11,8 @@ namespace ProyRestMatrizArray
         public FormVigia() {
             InitializeComponent();
         }
-		//SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
-		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\joseluisduran\source\repos\Evaluacion4\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True;Connect Timeout=30");
-		//
+		SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\cinti\Desktop\Eva4_Programación\EVALUA3CINTIADIAZ\ProyRestMatrizArray\BDDPROG2CINTIADIAZ.mdf;Integrated Security=True");
+		
 		private void Button3_Click(object sender, EventArgs e) {
             if (!File.Exists(@"C:\TXTS\VIGIACINTIADIAZ.txt")) {
                 MessageBox.Show("No existe");
@@ -99,6 +98,10 @@ namespace ProyRestMatrizArray
 
         private void Button4_Click(object sender, EventArgs e) {
             Visible = false;
+        }
+
+        private void FormVigia_Load(object sender, EventArgs e) {
+
         }
     }
 }
